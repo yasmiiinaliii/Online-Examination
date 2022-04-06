@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+
+    <!-- links -->
+    <link rel="icon" href="img/icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <script src="https://kit.fontawesome.com/3304859e00.js" crossorigin="anonymous"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  
+    <!-- script -->
+    <script src="script/qustionsLibrary.js"></script>
+    <script src="script/cokies.js"></script>
+
+
+</head>
+<body>
+
+    <div class="exam-container">
+        <div class="test-container">
+
+            <div class="timer-container">
+                <div id="Progress-contanier">
+                    <div id="progBar"></div>
+                </div>
+                <div id="timer"></div>
+            </div>
+
+            <div class="content-container">
+                <div id="ques-container">
+                    <div class="que-mark-container">
+                        <div id="quesHeader"></div>
+                        <div class="mark" onclick="markeQuestion()" id="mark">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                      <input class="choises" type="radio" id="A" name="Capitals" value="A"
+                        onchange="getUserAnswersValue(this.value);">
+                      <label for="A" id="LA" class="answers-lables">a- </label><br>
+                      <input class="choises" type="radio" id="B" name="Capitals" value="B"
+                        onchange="getUserAnswersValue(this.value);">
+                      <label for="B" id="LB" class="answers-lables">b- </label><br>
+                      <input class="choises" type="radio" id="C" name="Capitals" value="C"
+                        onchange="getUserAnswersValue(this.value);">
+                      <label for="C" id="LC" class="answers-lables">c- </label><br>
+                      <input class="choises" type="radio" id="D" name="Capitals" value="D"
+                        onchange="getUserAnswersValue(this.value);">
+                      <label for="D" id="LD" class="answers-lables">d- </label>
+                </div>
+
+                <div class="nav-submit-container">
+                    <input type="button" value="Submite" class="btn border-btn btn-exam" onclick="submit()">
+                    <div class="next-prev-container">
+                        <div id="prev" onclick="prevQus()">
+                            <i class="fas fa-arrow-circle-left"></i>
+                        </div>
+                        <div id="qnum"> 1 </div>
+                        <div id="next" onclick="nextQus()">
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mark-list-container" id="mark-list-container">
+            <div class="mark-list-container-header">
+                <h3 class="mark-title">Marked List</h3>
+            </div>
+            <div class="mark-list-container-content" id="mark-list-container-content">
+                <div class="mark-line"> </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script/main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grade</title>
+    <!-- links -->
+    <link rel="icon" href="img/icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/3304859e00.js" crossorigin="anonymous"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script src="script/cokies.js"></script>
+
+    <style>
+        .done-icon{
+            font-size: 4rem;
+            color: #6C63FF ;
+        }
+        .grade-page-title{
+            font-size: 1.8rem;
+            color: #282828;
+            font-weight: 400;
+            margin: 6px;
+        }
+        .g-username , .g-grade{
+            font-size: 1.5rem;
+            color: #6C63FF ;
+        }
+        #grade-page-container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: 30%;
+            left: 35%;
+        }
+    </style>
+   
+</head>
+
+<body onload="showgrade()">
+    <div id="grade-page-container">
+        <div class="done-icon"><i class="far fa-check-circle"></i></div>
+        <div class="grade-page-title">The Exam Submite Successfully</div>
+    </div>
+    <script>
+        var gradepage =  document.getElementById('grade-page-container');
+        var userName = getCookie('userName');
+        var grade = getCookie('grade');
+
+        function showgrade() {
+            gradepage.innerHTML +=
+                '<div class="g-username">' + userName + "</div>";
+            gradepage.innerHTML +=
+                '<div class="g-grade">' + grade + "/10</div>";
+        }
+        window.onpopstate = function (e) { window.history.forward(1); }
+    </script>
+</body>
+
+</html>

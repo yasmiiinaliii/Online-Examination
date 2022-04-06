@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ready Page</title>
+
+  <!-- links -->
+  <link rel="icon" href="img/icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/loading.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="ready-contanier">
+    <div class="ready-img"></div>
+    <div class="ready-text-btn-container">
+      <div class="ready-text-container">
+        <!-- <div class="mexican-wave"></div> -->
+        <h2 class="ready-tittle">Are You Ready?</h2>
+        <p class="ready-pragraph">
+          The Exam Include 10 Questions And Its Duration Is 1 Minute After The
+          Time End The Exam Will Submite Automatically
+        </p>
+        <span class="best-text">Best Of Luck :)</span>
+      </div>
+      <input type="button" value="Start Exam" class="btn" onclick="startExamBtn()">
+
+    </div>
+
+    <script>
+      function startExamBtn() {
+        window.open("exam.html", "_self");
+      }
+    </script>
+</body>
+
+</html>
