@@ -27,6 +27,7 @@ function _(x) {
 };
 
 window.addEventListener("load", start, false);
+
 //start function 
 function start() {
     displayQuestion();
@@ -43,16 +44,14 @@ function randomQuestions(arr) {
     return qList;
 }
 var inp =document.querySelectorAll("input[type='radio']")
-// console.log(inp);
+
 
 // displayQuestion
 function displayQuestion() {
     for(let i=0;i<inp.length;i++){
         inp[i].checked=false;
     }
-        check();
-
-    
+    check();
     q.innerHTML = questionsList[iqnum].quesHeader;
     a.innerHTML = questionsList[iqnum].answers[0].name;
     b.innerHTML = questionsList[iqnum].answers[1].name;
@@ -79,21 +78,20 @@ function nextQus() {
     displayQuestion();
 }
 
+
 function prevQus() {
     for(let i=0;i<inp.length;i++){
         inp[i].checked=false;
     }
-    // if(iqnum == -1){
-    //     iqnum=0;
-    // }
+ 
     console.log(iqnum);
     if (iqnum < questionsList.length && iqnum != 0) {
         iqnum--;
-        // getUserAnswersValue()
     }
     check();
     displayQuestion();
 }
+
 
 //next and prev btn color
 function prevNextColor() {
@@ -109,11 +107,8 @@ function prevNextColor() {
     }
 }
 
-// store Useranswers values 
-// function getUserAnswersValue(v) {
-//     gradeArr[iqnum] = v;
-// }
 
+//get question answer value from user
 function getUserAnswersValue() {
     choices = document.getElementsByName("Capitals");
     choice = 0;
@@ -195,6 +190,7 @@ function calcGrades() {
             grade++;
     }
 }
+
 // submite function
 function submit() {
     calcGrades()
